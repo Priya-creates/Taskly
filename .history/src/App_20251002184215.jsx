@@ -109,7 +109,7 @@ const App = () => {
              hover:bg-black hover:text-white cursor-pointer
              text-sm sm:text-base py-1 sm:py-1 px-2 sm:px-2"
           >
-            <div>{isMobile ? "Clear all" : "Clear all tasks"}</div>
+            <div>{isMobile ? "Clear all" Clear all tasks</div>
           </button>
         </div>
       </div>

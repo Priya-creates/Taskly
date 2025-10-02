@@ -11,7 +11,6 @@ import Sort from "./components/Sort";
 import TaskList from "./components/TaskList";
 import { MdFilterAlt } from "react-icons/md";
 import { BiSort } from "react-icons/bi";
-import { useMediaQuery } from "react-responsive";
 
 const App = () => {
   const [taskList, setTaskList] = React.useState([]);
@@ -34,7 +33,6 @@ const App = () => {
     setTaskList([]);
     toast.success("All tasks are cleared !");
   }
-  const isMobile = useMediaQuery({ maxWidth: 767 });
 
   React.useEffect(() => {
     const tasks = JSON.parse(localStorage.getItem("taskList")) || [];
@@ -58,18 +56,18 @@ const App = () => {
     }
 
     // 3) Sort by date
-    arr.sort((a, b) => {
-      if (sortType === "new-to-old" || sortType === "old-to-new") {
-        const ta = new Date(a.createdAt).valueOf();
-        const tb = new Date(b.createdAt).valueOf();
-        return sortType === "new-to-old" ? tb - ta : ta - tb;
-      } else if (sortType === "a-to-z") {
-        return (a.task || "").localeCompare(b.task || "");
-      } else if (sortType === "z-to-a") {
-        return (b.task || "").localeCompare(a.task || "");
-      }
-      return 0;
-    });
+     arr.sort((a, b) => {
+    if (sortType === "new-to-old" || sortType === "old-to-new") {
+      const ta = new Date(a.createdAt).valueOf();
+      const tb = new Date(b.createdAt).valueOf();
+      return sortType === "new-to-old" ? tb - ta : ta - tb;
+    } else if (sortType === "a-to-z") {
+      return (a.task || "").localeCompare(b.task || "");
+    } else if (sortType === "z-to-a") {
+      return (b.task || "").localeCompare(a.task || "");
+    }
+    return 0;
+  });
 
     return arr;
   }, [taskList, searchQuery, filters, sortType]);
@@ -81,12 +79,12 @@ const App = () => {
       <div className="flex justify-between items-baseline gap-4">
         <div
           onClick={() => setShowSearchBar(true)}
-          className="flex flex-row items-center gap-2 sm:gap-2 border-[1px] rounded-xl 
-             p-[1px] mt-4 hover:scale-105 transition-all duration-300 
+          className="flex flex-row items-center gap-2 border-[1px] rounded-xl 
+             p-1 mt-4 hover:scale-105 transition-all duration-300 
              hover:bg-black hover:text-white cursor-pointer
              text-sm sm:text-base py-1 sm:py-1 px-2 sm:px-2 "
         >
-          <p>{isMobile ? "Search" : "Search a task"}</p>
+          <p>Search a task</p>
           <IoSearch />
         </div>
         <div className="flex gap-4">
@@ -97,7 +95,7 @@ const App = () => {
              hover:bg-black hover:text-white cursor-pointer
              text-sm sm:text-base py-1 sm:py-1 px-2 sm:px-2"
           >
-            <div>{isMobile ? "Add" : "Add a task"}</div>
+            <div>Add a task</div>
             <div>
               <TiPencil />
             </div>
@@ -109,7 +107,7 @@ const App = () => {
              hover:bg-black hover:text-white cursor-pointer
              text-sm sm:text-base py-1 sm:py-1 px-2 sm:px-2"
           >
-            <div>{isMobile ? "Clear all" : "Clear all tasks"}</div>
+            <div>Clear all tasks</div>
           </button>
         </div>
       </div>
