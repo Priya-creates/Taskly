@@ -48,8 +48,6 @@ Tasks are saved in Local Storage so they remain after page refresh.
 Clone the repo
 
 git clone https://github.com/Priya-creates/Taskly.git
-cd taskly
-
 
 Install dependencies
 npm install
