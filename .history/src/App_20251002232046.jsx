@@ -76,7 +76,7 @@ const App = () => {
 
   return (
     <div className="pt-6 w-[95%] sm:w-[80%] md:w-[85%] mx-auto">
-      <ToastContainer position="bottom-right" theme="dark"/>
+      <ToastContainer position="bottom-right" />
       <Title />
       <div className="flex justify-between items-baseline gap-4">
         <div
