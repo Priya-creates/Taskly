@@ -40,8 +40,8 @@ Tasks are saved in Local Storage so they remain after page refresh.
 
 📸 Screenshots / Demo
 
-![Taskly Screenshot1]
-![Taskly Screenshot2]
+![Taskly Screenshot1](https://github.com/Priya-creates/Taskly/blob/main/src/assets/Screenshot%202025-10-03%20001641.png?raw=true)
+![Taskly Screenshot2](https://github.com/Priya-creates/Taskly/blob/main/src/assets/Screenshot%202025-10-03%20002254.png?raw=true)
 
 📂 Getting Started
 
