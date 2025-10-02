@@ -81,10 +81,10 @@ const App = () => {
       <div className="flex justify-between items-baseline gap-4">
         <div
           onClick={() => setShowSearchBar(true)}
-          className={`flex flex-row items-center gap-2 sm:gap-2  rounded-xl 
+          className=flex flex-row items-center gap-2 sm:gap-2 border-[1px] rounded-xl 
              p-[1px] mt-4 hover:scale-105 transition-all duration-300 
              hover:bg-black hover:text-white cursor-pointer
-             text-sm sm:text-base py-1 sm:py-1 px-2 sm:px-2 ${showSearchBar? "border-2":"border-[1px]"} `}
+             text-sm sm:text-base py-1 sm:py-1 px-2 sm:px-2 "
         >
           <p>{isMobile ? "Search" : "Search a task"}</p>
           <IoSearch />
@@ -92,10 +92,10 @@ const App = () => {
         <div className="flex gap-4">
           <button
             onClick={() => setShowTaskBar(true)}
-            className={`flex items-center gap-2  rounded-xl 
+            className="flex items-center gap-2 border-[1px] rounded-xl 
              py-1 px-2 mt-4 hover:scale-105 transition-all duration-300 
              hover:bg-black hover:text-white cursor-pointer
-             text-sm sm:text-base py-1 sm:py-1 px-2 sm:px-2 ${showTaskBar ? "border-2": "border-[1px]"}`}
+             text-sm sm:text-base py-1 sm:py-1 px-2 sm:px-2"
           >
             <div>{isMobile ? "Add" : "Add a task"}</div>
             <div>

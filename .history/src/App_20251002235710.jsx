@@ -84,7 +84,7 @@ const App = () => {
           className={`flex flex-row items-center gap-2 sm:gap-2  rounded-xl 
              p-[1px] mt-4 hover:scale-105 transition-all duration-300 
              hover:bg-black hover:text-white cursor-pointer
-             text-sm sm:text-base py-1 sm:py-1 px-2 sm:px-2 ${showSearchBar? "border-2":"border-[1px]"} `}
+             text-sm sm:text-base py-1 sm:py-1 px-2 sm:px-2 ${showSearchBar? "border-2":""} `}
         >
           <p>{isMobile ? "Search" : "Search a task"}</p>
           <IoSearch />
